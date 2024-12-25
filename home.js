@@ -1,8 +1,5 @@
-function add(a,b)
-{
-    return a + b
-  
-}
 
-var total = add(10,20)
-console.log(total)
+for(i=1;i<=10;i++)
+{console.log("2 X "+i+"="+2*i)
+    
+}
