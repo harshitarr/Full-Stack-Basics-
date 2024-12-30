@@ -1,0 +1,47 @@
+<body style="background-image: url('images/todolistbg.png');background-size: cover;">
+<div style="margin-top:10%;margin-left:39%; border:2px solid black;margin-right:39%;height:500px;background-image:url('images/listbg.png');background-size: 100%;">
+<div style="padding-left:17%">
+<h1 style="padding-left:5%;font-size: 30px;font-family: georgia;color:rgb(172, 90, 103);background-color: white;border:2px solid black;width:200px;padding:4%;">TO-DO-LIST</h1>
+
+<input id="inputitems" style="height:28px;border:2px black solid;font-family: georgia;color: rgb(151, 76, 88);font-weight: bold;" placeholder="Type Here">
+<button onclick ="addbutton()" style="height:27px;width:49px;background-color: rgb(250, 178, 190);">ADD</button>
+
+<ol id = "listconetainer">
+    <li style="font-family: georgia;font-size:18px;color: rgb(151, 76, 88);font-weight: bold;">LESS GO!
+         <button onclick="deleting(event) " style="background-color: rgb(172, 90, 103);font-family: georgia;font-size: 14px;color:white;padding:2%;">DELETE</button>
+    </li>
+</ol>
+
+</div>
+</div>
+</body>
+
+<script>
+    var ol = document.getElementById("listconetainer")
+    var inputitems = document.getElementById("inputitems")
+    
+    function addbutton(){
+        var listitem = document.createElement("li")
+        listitem.innerHTML = inputitems.value  +  "<button onclick = 'deleting(event)' style = 'background-color: rgb(172, 90, 103);font-family: georgia;font-size: 14px;color:white;padding:2%'> DELETE </button>"
+        ol.append(listitem)
+
+
+    }
+  
+
+
+
+    function deleting(event)
+    {
+        event.target.parentElement.remove()
+    }
+</script>
+
+<style>
+    #listconetainer li {
+        font-family: georgia;
+        font-size: 18px;
+        color: rgb(151, 76, 88);
+        font-weight: bold;
+    }
+</style> 
