@@ -1,0 +1,59 @@
+<style>
+    .overlap
+    {
+        background-color : black;
+        width : 100%;
+        height:100%;
+        position: absolute;
+        top:0px;
+        left:0px;
+        opacity:0.8;
+        z-index:1;
+        display:none;
+    }
+
+    .popup{
+        position:absolute;
+        width:40%;
+        z-index:3;
+        background-color: white;
+        color:black;
+        padding:40px;
+        border-radius:10px;
+        margin-top:18px;
+        left:30%;
+        display:none;
+    }
+
+</style>
+
+
+<button onclick="show()">Show</button>
+<div class="overlap">
+    <div class="popup">
+        <p>hi how are you i am fine how is life goinf hiajsndiunwifiu snkjnsiufniueniuc jdniwdimodim jdnowdoiwmdo</p>
+        <button onclick = "closeup()">close</button>
+    </div>
+</div>
+
+<script>
+    var popoverlay = document.querySelector(".overlap")
+    var popbox = document.querySelector(".popup")
+    function show()
+    {
+        popoverlay.style.display = "block"
+        popbox.style.display = "block"
+    }
+
+    function closeup() {
+        popoverlay.style.display = "none"
+        popbox.style.display = "none"
+    }
+</script>
+
+
+
+
+
+
+
