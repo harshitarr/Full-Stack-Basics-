@@ -1,9 +1,29 @@
 .nav{
-    background-color:#fd6579   
+    background-color:#fd6579;
+    
+    
 }
 
 .h1{
-    font-family: poppins;
+    font-family:verdana;
     font-size: 30px;
+    padding:1%;
+}
+
+h1,h2,p,h3{
+    font-family: verdana;
+}
+
+.insidecontainer{
     padding:2%;
+}
+
+.container1{
+    width:350px;
+    height :400px;
+    padding:2%;
+    background-color: black;
+    color:black;
+    border:black 2px solid;
+    border-radius:10px;
 }
