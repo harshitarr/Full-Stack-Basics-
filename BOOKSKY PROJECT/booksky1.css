@@ -27,3 +27,81 @@ h1,h2,p,h3{
     border:black 2px solid;
     border-radius:10px;
 }
+
+.add-button{
+    margin-top:2%;
+    width:55px;
+    height:55px;
+    color:black;
+    background-color: #fd6579;
+    font-size: 40px;
+    border-radius: 100%;
+    position:fixed;
+    right:60px;
+    
+}
+
+.screenoverlay{
+    position:absolute;
+    background-color: black;
+    opacity:0.8;
+    width:100%;
+    height:100%;
+    top:0%;
+    left:0%;
+    z-index:1;
+    display:none;
+
+}
+
+.popupbox{
+    position:absolute;
+    z-index:2;
+    width:40%;
+    background-color: #fd6579;
+    top:30%;
+    left:30%;
+    padding:10px;
+    border-radius: 10px;
+    display:none;
+
+}
+
+.popupbox input{
+    background:transparent;
+    width:100% ;   /* kila kila varum onnu onnum*/
+    margin:5px;
+    padding:10px;
+    font-size: 20px;
+    border:none;
+    border-bottom: solid black 2px;
+   
+
+}
+
+.popupbox ::placeholder{
+    color:black;
+}
+
+.popupbox textarea{
+    background:white;
+    width:100% ;   /* kila kila varum onnu onnum*/
+    margin:5px;
+    padding:10px;
+    font-size: 20px;
+    border:none;
+    margin-bottom:3%;
+    margin-top:1%;
+   
+}
+
+.popupbox button{
+    background-color:black;
+     color:white;
+     width:80px;
+     height:40px;
+     font-size:14px;
+     margin-top:10px;
+     border-radius:10px;
+     font-family: verdana;
+}
