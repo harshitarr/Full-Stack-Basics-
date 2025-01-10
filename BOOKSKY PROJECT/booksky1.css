@@ -14,11 +14,31 @@ h1,h2,p,h3{
     font-family: verdana;
 }
 
-.insidecontainer{
-    padding:2%;
+.insidecontainer h2{
+    font-size: 30px;
+    color:#fd6579 ;
 }
 
-.container1{
+.insidecontainer h3{
+   font-size:20px;
+   color:white;
+}
+
+.insidecontainer p{
+    line-height: 1.5rem;
+    color:white;
+}
+
+.insidecontainer button{
+    background-color:#fd6579  ; color:black;width:80px;height:40px;font-size:18px;margin-top:10px;border-radius:10px;font-family: verdana;
+}
+
+.container{
+    padding:2%;
+    
+}
+
+.insidecontainer{
     width:350px;
     height :400px;
     padding:2%;
@@ -26,19 +46,21 @@ h1,h2,p,h3{
     color:black;
     border:black 2px solid;
     border-radius:10px;
+    display:inline-block;
+    vertical-align: top;
 }
 
-.add-button{
-    margin-top:2%;
-    width:55px;
-    height:55px;
-    color:black;
+.add-button {
+    margin-top: 2%;
+    width: 70px;
+    height: 70px;
+    color: black;
     background-color: #fd6579;
     font-size: 40px;
     border-radius: 100%;
-    position:fixed;
-    right:60px;
-    
+    position: fixed ;
+    right: 60px;
+    bottom: 60px; 
 }
 
 .screenoverlay{
@@ -59,8 +81,8 @@ h1,h2,p,h3{
     z-index:2;
     width:40%;
     background-color: #fd6579;
-    top:30%;
-    left:30%;
+    top:20%;
+    left:32%;
     padding:10px;
     border-radius: 10px;
     display:none;
@@ -84,12 +106,12 @@ h1,h2,p,h3{
 }
 
 .popupbox textarea{
-    background:white;
+    background-color:fd6579;
     width:100% ;   /* kila kila varum onnu onnum*/
     margin:5px;
     padding:10px;
     font-size: 20px;
-    border:none;
+    border:black 2px solid;
     margin-bottom:3%;
     margin-top:1%;
    
