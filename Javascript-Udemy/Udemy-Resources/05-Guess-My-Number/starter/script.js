@@ -16,6 +16,8 @@ if(!guess)
 else if(guess === number)
 {
     document.querySelector('.message').textContent = "Gotcha !"
+
+    document.querySelector('body').style.backgroundColor="green"
 }
 
 else if(guess < number)
