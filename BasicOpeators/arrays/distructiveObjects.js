@@ -12,19 +12,15 @@ const restaurant = {
     };
 
 
-const arr = [1, 2, 3];
-const [x, y, z] = arr;
-console.log(x, y, z);
+/*const {name , categories , mainMenu } = restaurant;
+console.log(name , categories , mainMenu)*/
 
-let [first,second] = restaurant.categories;
 
-[first,second]=[second,first];
+const {name : n , categories : c , mainMenu : mm} = restaurant;
 
-console.log(first,second);
+console.log(n,c,mm);
 
-const [starter , main] = restaurant.order(2,0)
 
-console.log(starter,main) // note the difference in o/p
+const {menu = [] , starterMenu : sm = []}= restaurant;
 
-console.log(restaurant.order(2,0)) // check the diff
-
+console.log(menu ,mm )
