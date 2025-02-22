@@ -26,3 +26,8 @@ const restaurant = {
 
   const newMenu = [...restaurant.mainMenu , 'Gnocci']  // dont forget to put arr brackets
   console.log(newMenu)
+
+
+  const name = 'jonas';
+  const letters = [...name,'','s'];
+  console.log(...name)
