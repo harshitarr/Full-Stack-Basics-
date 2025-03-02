@@ -81,6 +81,32 @@ const displayMovements = function (movements){
 
 displayMovements(account1.movements)
 
+const createUserName = function(accs) {
+
+  accs.forEach(function(acc){
+
+    acc.username = acc.owner.toLowerCase().split(' ').map(function(name){
+
+      return name[0]
+  
+    }).join('')
+
+
+  })
+
+
+}
+
+createUserName(accounts)
+console.log(accounts)
+
+
+
+
+
+
+
+
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -96,5 +122,19 @@ const movementsUSD = movements.map(function(mov){
   return mov * eurToUsd
 })
 
+
+
+
 console.log(movementsUSD)
 
+ const movementsDescriptions = movements.map((mov,i,arr) => {
+  if(mov>0){
+    return `movements ${i+1}:you deposited ${mov}`
+  }
+  else
+  {
+    return `movements ${i+1}:you withdrew ${Math.abs(mov)}`
+  }
+ })
+
+ console.log(movementsDescriptions)
