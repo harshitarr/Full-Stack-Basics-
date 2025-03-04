@@ -79,7 +79,7 @@ const displayMovements = function (movements){
   })
 }
 
-displayMovements(account1.movements)
+
 
 const callDisplayBalance = function(movements){
 
@@ -87,27 +87,25 @@ const callDisplayBalance = function(movements){
   labelBalance.textContent = `${balance} EUR`
 }
 
-callDisplayBalance(account1.movements)
 
 
 
 
 
-const calDisplaySummary = function(movements){
+const calDisplaySummary = function(acc){
 
-  const incomes = movements.filter(mov => mov > 0).reduce((acc , mov) => acc + mov , 0)
+  const incomes = acc.movements.filter(mov => mov > 0).reduce((acc , mov) => acc + mov , 0)
   labelSumIn.textContent = `${incomes}`
 
-  const out = movements.filter(mov => mov < 0).reduce((acc , mov) => acc + mov , 0)
+  const out = acc.movements.filter(mov => mov < 0).reduce((acc , mov) => acc + mov , 0)
   labelSumOut.textContent = `${Math.abs(out)}`
 
-  const interest = movements.filter(mov => mov > 0).map(deposit => deposit * 1.2 / 100).filter((int , i , arr) =>{
+  const interest =acc.movements.filter(mov => mov > 0).map(deposit => deposit * acc.interestRate / 100).filter((int , i , arr) =>{
     return int >= 1
   } ).reduce((acc , int) => acc + int , 0)
   labelSumInterest.textContent = `${interest}`
 }
 
-calDisplaySummary(account1.movements)
 
 
 
@@ -133,9 +131,6 @@ createUserName(accounts)
 
 
 
-
-let currentaccount
-
 btnLogin.addEventListener('click' , function(e){
 
 
@@ -145,9 +140,22 @@ btnLogin.addEventListener('click' , function(e){
  if(currentaccount?.pin === Number(inputLoginPin.value))
  {
      labelWelcome.textContent = `Welcome back ,${currentaccount.owner.split(' ')[0]} `
+
+    containerApp.style.opacity = 100
+
+    inputLoginUsername.value = inputLoginPin.value =''
+
+    inputLoginPin.blur()
+
+    displayMovements(currentaccount.movements)
+    callDisplayBalance(currentaccount.movements)
+    calDisplaySummary(currentaccount)
+
+    
  }
 
 })
+
 
 
 
