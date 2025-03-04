@@ -132,12 +132,20 @@ const createUserName = function(accs) {
 createUserName(accounts)
 
 
-btnLogin.addEventListener('click' , function(){
 
 
-  eurToUsd.preventDefault()
-  console.log('LOGIN')
+let currentaccount
 
+btnLogin.addEventListener('click' , function(e){
+
+
+  e.preventDefault()
+ currentaccount = accounts.find(acc => acc.username === inputLoginUsername.value)
+
+ if(currentaccount?.pin === Number(inputLoginPin.value))
+ {
+     labelWelcome.textContent = `Welcome back ,${currentaccount.owner.split(' ')[0]} `
+ }
 
 })
 
