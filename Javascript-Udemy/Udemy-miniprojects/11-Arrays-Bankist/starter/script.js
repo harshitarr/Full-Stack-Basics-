@@ -132,6 +132,16 @@ const createUserName = function(accs) {
 createUserName(accounts)
 
 
+btnLogin.addEventListener('click' , function(){
+
+
+  eurToUsd.preventDefault()
+  console.log('LOGIN')
+
+
+})
+
+
 
 
 
