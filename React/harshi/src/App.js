@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  
+
+  function change(){
+    const name = ["earn","learn","make"];
+    const number = Math.floor(Math.random()*3);
+    return name[number]
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          You Can Do It Babe :)
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+            Sirikira nee 
+            <p>lets {change()} money</p>
     </div>
   );
 }
