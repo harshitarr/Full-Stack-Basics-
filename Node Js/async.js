@@ -10,6 +10,9 @@ const fileOps = async() =>{
 
         await fspromises.writeFile(path.join(__dirname,'end3.txt'),'i hope everything is fine')
         console.log("done writing")
+
+        await fspromises.unlink(path.join(__dirname,'end3.txt'))
+        console.log("done deleting ")
     }
 
     catch(err){
